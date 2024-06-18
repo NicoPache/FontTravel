@@ -29,7 +29,7 @@ const BorrarReserva = ({ setReservas }) => {
           }, 3000); 
       })
       .catch((error) => {
-        setMessage(error.response.data.message || 'Error al eliminar la reserva.');
+        setMessage(error.response.data.exceptionMessage || 'Error al eliminar la reserva.');
         setShowErrorAlert(true);
         setTimeout(() => setShowErrorAlert(false), 3000);
       });
