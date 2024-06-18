@@ -13,6 +13,7 @@ function Tours() {
   useEffect(() => {
     const getTours = async () => {
       try {
+        
         const response = await ApiService.getTours();
         setTours(response.data); 
       } catch (error) {

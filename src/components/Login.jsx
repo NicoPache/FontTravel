@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import users from '../Users'; // Asumiendo que 'Usuarios' contiene la lista hardcodeada de usuarios
 
-const Login = () => {
+const Login = ({handleLogin}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [emailError, setEmailError] = useState({ errorText: '', error: false });
@@ -39,7 +39,8 @@ const Login = () => {
     const user = users.find((user) => user.nombreUsuario === email && user.contraseña === password);
 
     if (user) {
-      console.log('Usuario autenticado:', user);
+        localStorage.setItem('idUsuario', user.id);
+        handleLogin()
 
     } else {
       setPassError({
