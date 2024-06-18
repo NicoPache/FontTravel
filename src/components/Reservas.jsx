@@ -124,7 +124,15 @@ useEffect(() => {
           <Alert severity="error">{messageReserva}</Alert>
         </Box>
       )}
-     
+
+      <Box>
+      <Title text="borrar Reserva" />
+      <BorrarReserva setReservas={getReservas} />
+      </Box>
+       <Box mt={4}>
+       
+       <TableReservas reservas={reservas} />
+     </Box>
     </>
   );
 };
