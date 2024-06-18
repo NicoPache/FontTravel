@@ -7,6 +7,8 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { ApiService } from '../services/ApiService'; 
+import Title from './Title';
+import { Box } from '@mui/material';
 function Tours() {
   const [tours, setTours] = useState([]);
 
@@ -25,6 +27,12 @@ function Tours() {
     getTours();
   }, []); 
   return (
+    
+    <Box>
+      
+      <>
+      <Title text={'Tours'}/>
+      </>
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
@@ -51,6 +59,7 @@ function Tours() {
         </TableBody>
       </Table>
     </TableContainer>
+    </Box>
   );
 }
 

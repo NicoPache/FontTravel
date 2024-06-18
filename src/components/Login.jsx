@@ -56,7 +56,7 @@ const Login = ({handleLogin}) => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '100vh', // Centrar verticalmente en la pantalla
+        height: '100vh', 
       }}
     >
       <Card sx={{ padding: 1, minWidth: 310, boxShadow: 5 }}>
